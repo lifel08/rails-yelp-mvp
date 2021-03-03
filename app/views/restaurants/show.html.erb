@@ -1,0 +1,17 @@
+<h1>Read more about your fav restaurant</h1>
+
+<%= link_to 'go back', restaurants_path %>
+
+<%= simple_form_for @user do |f| %>
+  <% f.input :name %>
+  <% f.input :address %>
+  <% f.input :category %>
+  <% f.input :review %>
+  <% f.button :submit %>
+<%= end %>
+
+<%= link_to 'edit', edit_restaurant_path(@restaurant) %>
+<%= link_to 'delete', restaurant_path(@restaurant), method: :delete, data: { confirm: "are you sure?" } %>
+
+
+
